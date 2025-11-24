@@ -7,11 +7,11 @@ class TestUserManagerA(unittest.TestCase):
 
     def setUp(self):
         self.manager = UserManager()
-        # Add test users
-        self.manager.add_user("John Smith", "john@example.com", "1990-05-15")
-        self.manager.add_user("Anna Johnson", "anna@example.com", "2005-08-20")
-        self.manager.add_user("Peter Wilson", "peter@example.com", "1955-12-01")
-        self.manager.add_user("Maria Brown", "maria@example.com", "2010-03-10")
+        # Add test users with updated dates for 2025
+        self.manager.add_user("John Smith", "john@example.com", "1990-05-15")  # ~35 lat - dorosły
+        self.manager.add_user("Anna Johnson", "anna@example.com", "2010-08-20")  # ~15 lat - dziecko
+        self.manager.add_user("Peter Wilson", "peter@example.com", "1955-12-01")  # ~70 lat - senior
+        self.manager.add_user("Maria Brown", "maria@example.com", "2015-03-10")  # ~10 lat - dziecko
 
     def test_calculate_age_adult(self):
         """Test age calculation for adult"""
